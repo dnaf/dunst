@@ -594,7 +594,7 @@ static dimension_t x_render_layout(cairo_t *c, colored_layout *cl, colored_layou
 
         if (cl->n->progress > 0) {
                 cairo_set_source_rgb(c, cl->bg.r + 0.1, cl->bg.g + 0.1, cl->bg.b + 0.1);
-                cairo_rectangle(c, bg_x, bg_y, bg_width / 100 * (cl->n->progress - 1), bg_height);
+                cairo_rectangle(c, bg_x, bg_y, bg_width * (cl->n->progress - 1) / 100, bg_height / 8);
                 cairo_fill(c);
         }
 
